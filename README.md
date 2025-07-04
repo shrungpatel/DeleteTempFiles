@@ -1,7 +1,7 @@
 ## Introduction
 On a Windows device, I often open the app PC Manager. There is a boost button that deletes temp files, but the app does this automatically when the size is more than 1GB. This script automates this so you do not have to manually do it everytime or wait for it to reach 1GB.
 
-# Steps
+## Steps
 1). Make sure you have Python installed
 
 2). `Win + R` and enter `taskschd.msc` to open the Task Scheduler
