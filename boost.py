@@ -16,19 +16,17 @@ def clear_temp_files(temp_dir):
         try:
             if os.path.isfile(file_path):
                 os.remove(file_path)
-                print('Removed file')
+                #print('Removed file')
             elif os.path.isdir(file_path):
                 shutil.rmtree(file_path)
-                print('Removed dir')
+                #print('Removed dir')
         except Exception as e:
             continue
             #print('Couldn\'t remove')
     #new += get_temp_memory_usage(temp_dir)
 
 def get_temp_memory_usage(temp_dir):
-    """Get current temporary memory usage""" 
-    #temp_dir = os.environ.get('TEMP', 'C:\\Windows\\Temp')
-    #temp_dir = 'C:\\Windows\\Temp'
+    """Get current temporary memory usage"""
     temp_files = os.listdir(temp_dir)
     temp_usage = 0
 
@@ -56,4 +54,3 @@ if __name__ == "__main__":
     temp_dirs = ['C:\\Windows\\Temp', os.environ.get('TEMP', 'C:\\Windows\\Temp')]
     [clear_temp_files(temp_dir) for temp_dir in temp_dirs]
     #print('Deleted', old - new, 'MB')
-    raise SystemExit
